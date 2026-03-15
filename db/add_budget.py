@@ -51,13 +51,15 @@ def add_monthly_budget() -> None:
     bank_balance = _prompt_float("Bank balance: ")
     income = _prompt_float("Income: ")
 
-    print("\nBudget allocations:")
+    # Savings and investments goals for this month
+    budget_savings = _prompt_float("Planned contribution to savings: ")
+    budget_investments = _prompt_float("Planned contribution to investments: ")
+
+    print("\nBudget allocations for spending:")
     budget_needs = _prompt_float("  Needs: ")
     budget_food = _prompt_float("  Food: ")
     budget_wants = _prompt_float("  Wants: ")
     budget_travel = _prompt_float("  Travel: ")
-    budget_savings = _prompt_float("  Savings: ")
-    budget_investments = _prompt_float("  Investments: ")
 
     print("\nSpent so far this month (excluding savings and investments):")
     spent_needs = _prompt_float("  Needs: ")
