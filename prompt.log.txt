@@ -1,0 +1,28 @@
+1: I want to create a SQLite database to track my budget.
+ Here are the columns I'm thinking of: money currently in my bank accout, 
+ income, budgets for things i need, food, things i want, traveling, savings 
+ account, investments, money already spent, money spent past months. 
+ Can you help me write a CREATE TABLE statement and suggest any columns 
+ I might be missing?"
+
+2: Create your database and table like: 
+import sqlite3
+
+# Connect to (or create) a database file
+con = sqlite3.connect('my_tracker.db')
+cur = con.cursor()
+
+# Create your table (if it doesn't already exist)
+cur.execute('''
+    CREATE TABLE IF NOT EXISTS books (
+        id INTEGER PRIMARY KEY,
+        title TEXT NOT NULL,
+        author TEXT,
+        rating INTEGER,
+        date_finished TEXT,
+        notes TEXT
+    )
+''')
+con.commit()
+
+3: Write a function that takes user input and inserts a new record into your table.
