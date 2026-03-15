@@ -59,13 +59,13 @@ def add_monthly_budget() -> None:
     budget_savings = _prompt_float("  Savings: ")
     budget_investments = _prompt_float("  Investments: ")
 
-    print("\nSpent so far this month:")
+    print("\nSpent so far this month (excluding savings and investments):")
     spent_needs = _prompt_float("  Needs: ")
     spent_food = _prompt_float("  Food: ")
     spent_wants = _prompt_float("  Wants: ")
     spent_travel = _prompt_float("  Travel: ")
-    spent_savings = _prompt_float("  Savings: ")
-    spent_investments = _prompt_float("  Investments: ")
+    spent_savings = 0.0
+    spent_investments = 0.0
 
     notes = input("\nNotes (optional): ").strip() or None
 

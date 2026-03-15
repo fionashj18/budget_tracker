@@ -108,9 +108,7 @@ def do_read():
             + (r["spent_food"] or 0)
             + (r["spent_wants"] or 0)
             + (r["spent_travel"] or 0)
-            + (r["spent_savings"] or 0)
-            + (r["spent_investments"] or 0)
-        )
+        )  # savings and investments are not counted as "spent" here
         print(f"\n  id={r['id']}  {r['year']}-{r['month']:02d}  "
               f"income={r['income']}  bank={r['bank_balance']}  "
               f"budget total={total_budget}  spent={total_spent}")
